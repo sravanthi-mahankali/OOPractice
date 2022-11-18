@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="58e671c8-b48e-43d4-b924-fdd4a15bcef1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AUDTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AUDTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -79,6 +79,9 @@
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org.example" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.example" />

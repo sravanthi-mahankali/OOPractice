@@ -27,38 +27,37 @@ class AccountTest {
     @Test
     void ShouldBeAbleToUpdateTheBalanceWhenDepositedAmount() {
         Account account = new Account("Name1");
-        String balance = account.deposit(new AUD(10));
+        account.deposit(new AUD(10));
         assertEquals(new AUD(10), account.getBalance());
 
     }
 
     @Test
-    void ShouldBeAbleToUpdateTheBalanceAfterWithDrawTheAmount() {
+    void ShouldBeAbleToUpdateTheBalanceAfterWithDrawTheAmount() throws InsufficientBalanceException {
         Account account = new Account("Name1");
         account.deposit(new AUD(10));
 
-        String balance = account.withDraw(new AUD(5));
+        account.withDraw(new AUD(5));
 
-        assertEquals("AUD{value=5.0}", balance);
+        assertEquals(new AUD(5), account.getBalance());
     }
 
     @Test
-    void ShouldNotBeAbleToWithDrawTheAmountGreaterThanBalance() {
+    void ShouldNotBeAbleToWithDrawTheAmountGreaterThanBalance() throws InsufficientBalanceException {
         Account account = new Account("Name1");
         account.deposit(new AUD(10));
 
-        String result = account.withDraw(new AUD(15));
-
-        assertEquals("Insufficient balance", result);
+        assertThrows(InsufficientBalanceException.class, () ->account.withDraw(new AUD(15)));
+        assertEquals(new AUD(10), account.getBalance());
     }
 
     @Test
-    void ShouldBeAbleToWithDrawTotalBalanceAmount() {
+    void ShouldBeAbleToWithDrawTotalBalanceAmount() throws InsufficientBalanceException {
         Account account = new Account("Name1");
         account.deposit(new AUD(10));
 
-        String balance = account.withDraw(new AUD(10));
+        account.withDraw(new AUD(10));
 
-        assertEquals("AUD{value=0.0}", balance);
+        assertEquals(new AUD(0), account.getBalance());
     }
 }

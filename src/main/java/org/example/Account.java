@@ -21,17 +21,15 @@ public class Account {
         return balance;
     }
 
-    public String deposit(AUD amount) {
+    public void deposit(AUD amount) {
         balance = balance.add(amount);
-        return balance.toString();
     }
 
-    public String withDraw(AUD amount) {
+    public void withDraw(AUD amount) throws InsufficientBalanceException {
         if (!balance.greaterThanOrEqual(amount)){
-            return "Insufficient balance";
+            throw new InsufficientBalanceException();
         }
         balance = balance.Subtract(amount);
-        return balance.toString();
     }
 
 }
