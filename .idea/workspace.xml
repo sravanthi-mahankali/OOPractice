@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="58e671c8-b48e-43d4-b924-fdd4a15bcef1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AUD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/InsufficientBalanceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/InsufficientBalanceException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AUDTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AUDTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Constants.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,30 +88,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.WithDraw.ShouldNotBeAbleToWithDrawTheAmountGreaterThanBalance">
-    <configuration name="AUDTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.example.AUDTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.AccountTest">
     <configuration name="AccountTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -137,7 +112,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="AccountTest.ShouldThrowMaxBalanceLimitExceededWhenDepositedMoreThanMaxBalanceLimt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Deposit.ShouldThrowMaxBalanceLimitExceededWhenDepositedMoreThanMaxBalanceLimt" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -150,7 +125,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.AccountTest.ShouldThrowMaxBalanceLimitExceededWhenDepositedMoreThanMaxBalanceLimt&quot;" />
+            <option value="&quot;org.example.AccountTest$Deposit.ShouldThrowMaxBalanceLimitExceededWhenDepositedMoreThanMaxBalanceLimt&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="WithDraw" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.example.AccountTest$WithDraw&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -208,11 +206,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AccountTest" />
+        <item itemvalue="Gradle.Deposit.ShouldThrowMaxBalanceLimitExceededWhenDepositedMoreThanMaxBalanceLimt" />
+        <item itemvalue="Gradle.WithDraw" />
         <item itemvalue="Gradle.WithDraw.ShouldNotBeAbleToWithDrawTheAmountGreaterThanBalance" />
         <item itemvalue="Gradle.WithDraw.ShouldBeAbleToUpdateTheBalanceAfterWithDrawTheAmount" />
-        <item itemvalue="Gradle.AUDTest" />
-        <item itemvalue="Gradle.AccountTest" />
-        <item itemvalue="Gradle.AccountTest.ShouldThrowMaxBalanceLimitExceededWhenDepositedMoreThanMaxBalanceLimt" />
       </list>
     </recent_temporary>
   </component>

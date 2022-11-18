@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.exception.DepositLimitExceededException;
-import org.example.exception.InsufficientBalanceException;
-import org.example.exception.MaxBalanceLimitExceeded;
-import org.example.exception.MinimumDepositLimitRequiredException;
+import org.example.exception.*;
 
 import static org.example.Constants.*;
 
@@ -48,7 +45,13 @@ public class Account {
         balance = newBalance ;
     }
 
-    public void withDraw(AUD amount) throws InsufficientBalanceException {
+    public void withDraw(AUD amount) throws InsufficientBalanceException, MinimumWithDrawAmountRequiredException, WithDrawLimitExceededException {
+        if(amount.lessThan(MIN_WITH_DRAW_LIMIT)) {
+            throw new MinimumWithDrawAmountRequiredException();
+        }
+        if(amount.greaterThan(MAX_WITH_DRAW_LIMIT)) {
+            throw new WithDrawLimitExceededException();
+        }
         if (!balance.greaterThanOrEqual(amount)){
             throw new InsufficientBalanceException();
         }
