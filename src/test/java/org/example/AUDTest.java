@@ -57,6 +57,19 @@ public class AUDTest {
     }
 
     @Test
+    void greaterThan() {
+        assertFalse(new AUD(5).greaterThan(new AUD(10)));
+        assertTrue(new AUD(10).greaterThan(new AUD(5)));
+        assertFalse(new AUD(10).greaterThan(new AUD(10)));
+    }
+
+    @Test
+    void lessThan() {
+        assertFalse(new AUD(50).lessThan(new AUD(10)));
+        assertTrue(new AUD(10).lessThan(new AUD(50)));
+        assertFalse(new AUD(10).lessThan(new AUD(10)));
+    }
+    @Test
     void toStringMethod() {
         assertEquals("AUD{value=10.0}", new AUD(10).toString());
     }

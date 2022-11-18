@@ -34,6 +34,14 @@ public class AUD {
         return this.value >= amount.value;
     }
 
+    public boolean greaterThan(AUD amount) {
+        return this.value > amount.value;
+    }
+
+    public boolean lessThan(AUD amount) {
+        return this.value < amount.value;
+    }
+
     @Override
     public String toString() {
         return "AUD{" +
