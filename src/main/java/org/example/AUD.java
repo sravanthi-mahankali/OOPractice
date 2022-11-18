@@ -29,4 +29,15 @@ public class AUD {
     public AUD Subtract(AUD aud) {
         return new AUD( this.value - aud.value);
     }
+
+    public boolean greaterThanOrEqual(AUD amount) {
+        return this.value >= amount.value;
+    }
+
+    @Override
+    public String toString() {
+        return "AUD{" +
+                "value=" + value +
+                '}';
+    }
 }

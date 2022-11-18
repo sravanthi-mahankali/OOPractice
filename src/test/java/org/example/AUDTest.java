@@ -1,3 +1,5 @@
+package org.example;
+
 import org.example.AUD;
 import org.junit.jupiter.api.Test;
 
@@ -44,5 +46,18 @@ public class AUDTest {
     @Test
     public void threeAUDSubtractedWithFiveAUDShouldBeEqualToNegativeTwoAUD() {
         assertEquals(new AUD(-2), new AUD(3).Subtract(new AUD(5)));
+    }
+
+
+    @Test
+    void greaterThanOrEqual() {
+        assertFalse(new AUD(5).greaterThanOrEqual(new AUD(10)));
+        assertTrue(new AUD(10).greaterThanOrEqual(new AUD(5)));
+        assertTrue(new AUD(10).greaterThanOrEqual(new AUD(10)));
+    }
+
+    @Test
+    void toStringMethod() {
+        assertEquals("AUD{value=10.0}", new AUD(10).toString());
     }
 }
