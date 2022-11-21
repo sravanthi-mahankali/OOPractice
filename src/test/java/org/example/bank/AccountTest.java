@@ -1,10 +1,12 @@
-package org.example;
+package org.example.bank;
 
+import org.example.bank.AUD;
+import org.example.bank.Account;
 import org.example.exception.*;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import static org.example.Constants.*;
+import static org.example.bank.Constants.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AccountTest {

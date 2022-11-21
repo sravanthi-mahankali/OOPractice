@@ -1,11 +1,11 @@
-package org.example;
+package org.example.bank;
 
 import org.example.exception.*;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-import static org.example.Constants.*;
+import static org.example.bank.Constants.*;
 
 public class Account {
 
@@ -13,7 +13,7 @@ public class Account {
     private final long id;
     private final String name;
     private AUD balance;
-    private final Map<String, List<Transaction>> transactionHistory = new HashMap<>();
+    private final Map<String, List<TransactionTypes>> transactionHistory = new HashMap<>();
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("M/d/yyyy");
 
     public Account(String name) {
@@ -37,7 +37,7 @@ public class Account {
     }
 
     public AUD deposit(AUD amount) throws MaxBalanceLimitExceeded, DepositLimitExceededException, MinimumDepositLimitRequiredException, MaxLimitExceededException {
-        validateTransaction(Transaction.DEPOSIT);
+        validateTransaction(TransactionTypes.DEPOSIT);
         if(amount.lessThan(MIN_DEPOSIT_LIMIT)) {
             throw new MinimumDepositLimitRequiredException();
         }
@@ -49,12 +49,12 @@ public class Account {
             throw new MaxBalanceLimitExceeded();
         }
         balance = newBalance ;
-        recordTransaction(Transaction.DEPOSIT);
+        recordTransaction(TransactionTypes.DEPOSIT);
         return balance;
     }
 
     public AUD withDraw(AUD amount) throws InsufficientBalanceException, MinimumWithDrawAmountRequiredException, WithDrawLimitExceededException, MaxLimitExceededException {
-        validateTransaction(Transaction.WITHDRAW);
+        validateTransaction(TransactionTypes.WITHDRAW);
         if(amount.lessThan(MIN_WITH_DRAW_LIMIT)) {
             throw new MinimumWithDrawAmountRequiredException();
         }
@@ -65,7 +65,7 @@ public class Account {
             throw new InsufficientBalanceException();
         }
         balance = balance.Subtract(amount);
-        recordTransaction(Transaction.WITHDRAW);
+        recordTransaction(TransactionTypes.WITHDRAW);
         return balance;
     }
 
@@ -75,8 +75,8 @@ public class Account {
         return balance;
     }
 
-    private void validateTransaction(Transaction transaction) throws MaxLimitExceededException {
-        List<Transaction> todayTransactions = transactionHistory.get(dateFormat.format(new Date()));
+    private void validateTransaction(TransactionTypes transaction) throws MaxLimitExceededException {
+        List<TransactionTypes> todayTransactions = transactionHistory.get(dateFormat.format(new Date()));
         if(todayTransactions != null) {
             if(todayTransactions.stream().filter(t -> t == transaction).count() >= MAX_NO_OF_Similar_Transactions_PER_DAY) {
                 throw new MaxLimitExceededException(transaction.toString());
@@ -84,7 +84,7 @@ public class Account {
         }
     }
 
-    private void recordTransaction(Transaction transactionType) {
+    private void recordTransaction(TransactionTypes transactionType) {
         String date = dateFormat.format(new Date());
         if(!transactionHistory.containsKey(date)) {
             transactionHistory.put(date, new ArrayList<>(Collections.singleton(transactionType)));

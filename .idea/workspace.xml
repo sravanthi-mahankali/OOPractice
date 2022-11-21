@@ -6,9 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="58e671c8-b48e-43d4-b924-fdd4a15bcef1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/AUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/DepositLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/DepositLimitExceededException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxBalanceLimitExceeded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxBalanceLimitExceeded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxLimitExceededException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumDepositLimitRequiredException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumDepositLimitRequiredException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumWithDrawAmountRequiredException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumWithDrawAmountRequiredException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/Transaction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/WithDrawLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/WithDrawLimitExceededException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AUDTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/bank/AUDTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/bank/AccountTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,8 +53,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Enum" />
+        <option value="JUnit5 Test Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -89,7 +100,7 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.AccountTest">
+  <component name="RunManager" selected="Gradle.BankTest.ShouldBeAbleToCreateAnAccount">
     <configuration name="AccountTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -113,7 +124,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="Deposit.ShouldThrowMaxLimitExceededException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BankTest.ShouldBeAbleToCreateAnAccount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -126,7 +137,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.AccountTest$Deposit.ShouldThrowMaxLimitExceededException&quot;" />
+            <option value="&quot;org.example.bank.BankTest.ShouldBeAbleToCreateAnAccount&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -207,11 +218,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.BankTest.ShouldBeAbleToCreateAnAccount" />
         <item itemvalue="Gradle.AccountTest" />
         <item itemvalue="Gradle.transfer.ShouldNotTransferMoreThanPermittedTransactions" />
         <item itemvalue="Gradle.transfer.ShouldTransferAmountAccountOneToOther" />
         <item itemvalue="Gradle.WithDraw.ShouldThrowMaxLimitExceededException" />
-        <item itemvalue="Gradle.Deposit.ShouldThrowMaxLimitExceededException" />
       </list>
     </recent_temporary>
   </component>

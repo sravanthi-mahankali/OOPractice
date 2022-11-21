@@ -1,6 +1,6 @@
 package org.example.exception;
 
-import static org.example.Constants.MAX_BALANCE_LIMIT;
+import static org.example.bank.Constants.MAX_BALANCE_LIMIT;
 
 public class MaxBalanceLimitExceeded extends Exception {
     public String toString(){

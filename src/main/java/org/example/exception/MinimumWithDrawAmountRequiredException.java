@@ -1,6 +1,6 @@
 package org.example.exception;
 
-import static org.example.Constants.MIN_WITH_DRAW_LIMIT;
+import static org.example.bank.Constants.MIN_WITH_DRAW_LIMIT;
 
 public class MinimumWithDrawAmountRequiredException extends Exception {
     public String toString(){

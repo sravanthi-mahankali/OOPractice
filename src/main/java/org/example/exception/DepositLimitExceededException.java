@@ -1,7 +1,7 @@
 package org.example.exception;
 
 
-import static org.example.Constants.MAX_DEPOSIT_LIMIT;
+import static org.example.bank.Constants.MAX_DEPOSIT_LIMIT;
 
 public class DepositLimitExceededException extends Exception {
     public String toString(){

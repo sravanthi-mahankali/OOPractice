@@ -1,4 +1,6 @@
-package org.example;
+package org.example.bank;
+
+import org.example.bank.AUD;
 
 public class Constants {
     public static final AUD MAX_BALANCE_LIMIT = new AUD(100000);
