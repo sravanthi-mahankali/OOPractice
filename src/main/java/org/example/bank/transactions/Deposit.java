@@ -3,7 +3,7 @@ package org.example.bank.transactions;
 import org.example.bank.AUD;
 import org.example.bank.Account;
 import org.example.bank.Bank;
-import org.example.exception.*;
+import org.example.bank.exception.*;
 
 public class Deposit implements Transaction {
     private final AUD amount;
@@ -15,7 +15,7 @@ public class Deposit implements Transaction {
     }
 
     @Override
-    public String execute(Bank bank) throws DepositLimitExceededException, MaxBalanceLimitExceeded, MaxLimitExceededException, AccountNotFoundException, MinimumDepositLimitRequiredException {
+    public String execute(Bank bank) throws DepositException, MaxTransactionLimitExceededException, AccountNotFoundException {
         Account account = bank.searchAccount(accountId);
         return String.valueOf(account.deposit(amount));
     }

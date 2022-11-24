@@ -71,6 +71,6 @@ public class AUDTest {
     }
     @Test
     void toStringMethod() {
-        assertEquals("AUD{value=10.0}", new AUD(10).toString());
+        assertEquals("10.0", new AUD(10).toString());
     }
 }

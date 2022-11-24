@@ -3,7 +3,7 @@ package org.example.bank.transactions;
 import org.example.bank.AUD;
 import org.example.bank.Account;
 import org.example.bank.Bank;
-import org.example.exception.*;
+import org.example.bank.exception.*;
 
 public class WithDraw implements Transaction {
     private final long accountId;
@@ -15,7 +15,7 @@ public class WithDraw implements Transaction {
     }
 
     @Override
-    public String execute(Bank bank) throws  MaxLimitExceededException, AccountNotFoundException, MinimumWithDrawAmountRequiredException, InsufficientBalanceException, WithDrawLimitExceededException {
+    public String execute(Bank bank) throws AccountNotFoundException, MaxTransactionLimitExceededException, WithDrawException {
         Account account = bank.searchAccount(accountId);
         return String.valueOf(account.withDraw(amount));
     }

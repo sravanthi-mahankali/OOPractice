@@ -44,8 +44,6 @@ public class AUD {
 
     @Override
     public String toString() {
-        return "AUD{" +
-                "value=" + value +
-                '}';
+        return String.valueOf(value);
     }
 }

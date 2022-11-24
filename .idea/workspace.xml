@@ -5,20 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="58e671c8-b48e-43d4-b924-fdd4a15bcef1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/parser/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/AUD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/DepositLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/DepositLimitExceededException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxBalanceLimitExceeded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxBalanceLimitExceeded.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxLimitExceededException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumDepositLimitRequiredException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumDepositLimitRequiredException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumWithDrawAmountRequiredException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumWithDrawAmountRequiredException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/Transaction.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/WithDrawLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/exception/WithDrawLimitExceededException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AUDTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/bank/AUDTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/bank/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bank/AUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/AUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bank/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bank/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bank/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bank/TransactionTypes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/TransactionType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Deposit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Transaction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Transfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Transfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/bank/transactions/WithDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/transactions/WithDraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/AccountNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/exception/AccountNotFoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/DepositLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/exception/DepositLimitExceededException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/InsufficientBalanceException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/exception/InsufficientBalanceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxBalanceLimitExceeded.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/exception/MaxBalanceLimitExceeded.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MaxLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/exception/MaxTransactionLimitExceededException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumDepositLimitRequiredException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/exception/MinimumDepositLimitRequiredException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/MinimumWithDrawAmountRequiredException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/exception/MinimumWithDrawAmountRequiredException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/exception/WithDrawLimitExceededException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/bank/exception/WithDrawLimitExceededException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/parser/Parser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/bank/AUDTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/bank/AUDTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/bank/AccountTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/bank/AccountTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/bank/BankTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/bank/BankTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,21 +84,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.intentionPowerPack"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "JAVA"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;JAVA&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -100,8 +110,8 @@
       <recent name="org.example" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.BankTest.ShouldBeAbleToCreateAnAccount">
-    <configuration name="AccountTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.ParserTest">
+    <configuration name="BalanceTest.ShouldBeAbleToExecuteDepositTransaction" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -114,7 +124,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.AccountTest&quot;" />
+            <option value="&quot;org.example.bank.transactions.BalanceTest.ShouldBeAbleToExecuteDepositTransaction&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -124,7 +134,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="BankTest.ShouldBeAbleToCreateAnAccount" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BankTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -137,7 +147,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.bank.BankTest.ShouldBeAbleToCreateAnAccount&quot;" />
+            <option value="&quot;org.example.bank.BankTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -147,7 +157,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="WithDraw.ShouldThrowMaxLimitExceededException" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="BankTest.ShouldThrowEXceptionWhenInvalidTransaction" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -160,7 +170,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.AccountTest$WithDraw.ShouldThrowMaxLimitExceededException&quot;" />
+            <option value="&quot;org.example.bank.BankTest.ShouldThrowEXceptionWhenInvalidTransaction&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -170,7 +180,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="transfer.ShouldNotTransferMoreThanPermittedTransactions" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParserTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -183,7 +193,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.AccountTest$transfer.ShouldNotTransferMoreThanPermittedTransactions&quot;" />
+            <option value="&quot;org.example.bank.parser.ParserTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,7 +203,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="transfer.ShouldTransferAmountAccountOneToOther" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="ParserTest.shouldReturnCreateTransaction" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -206,7 +216,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.example.AccountTest$transfer.ShouldTransferAmountAccountOneToOther&quot;" />
+            <option value="&quot;org.example.bank.parser.ParserTest.shouldReturnCreateTransaction&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -218,11 +228,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.BankTest.ShouldBeAbleToCreateAnAccount" />
-        <item itemvalue="Gradle.AccountTest" />
-        <item itemvalue="Gradle.transfer.ShouldNotTransferMoreThanPermittedTransactions" />
-        <item itemvalue="Gradle.transfer.ShouldTransferAmountAccountOneToOther" />
-        <item itemvalue="Gradle.WithDraw.ShouldThrowMaxLimitExceededException" />
+        <item itemvalue="Gradle.ParserTest" />
+        <item itemvalue="Gradle.ParserTest.shouldReturnCreateTransaction" />
+        <item itemvalue="Gradle.BankTest" />
+        <item itemvalue="Gradle.BankTest.ShouldThrowEXceptionWhenInvalidTransaction" />
+        <item itemvalue="Gradle.BalanceTest.ShouldBeAbleToExecuteDepositTransaction" />
       </list>
     </recent_temporary>
   </component>
@@ -250,5 +260,44 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Deposit.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Deposit.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bank/Bank.java</url>
+          <line>34</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Deposit.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/bank/transactions/Deposit.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="new Deposit(Long.parseLong(args[1]), new AUD(Double.parseDouble(args[2])))" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
