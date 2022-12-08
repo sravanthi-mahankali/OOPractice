@@ -18,6 +18,7 @@ public class Parser {
                 case TRANSFER -> new Transfer(Long.parseLong(args[1]), Long.parseLong(args[2]), new AUD(Double.parseDouble(args[3])));
                 case CREATE -> new Create(args[1]);
                 case BALANCE -> new Balance(Long.parseLong(args[1]));
+                case TRANSACTIONHISTORY -> new TransactionHistory(Long.parseLong(args[1]));
             };
         } catch (ArrayIndexOutOfBoundsException | NumberFormatException exception) {
            throw new IllegalArgumentException("Invalid Input");

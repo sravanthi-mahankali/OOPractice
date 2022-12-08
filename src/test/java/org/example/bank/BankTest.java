@@ -1,6 +1,5 @@
 package org.example.bank;
 
-import org.example.bank.exception.AccountNotFoundException;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -16,7 +15,7 @@ class BankTest {
     }
 
     @Test
-    void ShouldBeAbleToExecuteDepositTransaction() throws Exception {
+    void ShouldBeAbleToExecuteDepositTransaction() {
         bank = new Bank();
         bank.executeTransaction("Create UserName");
         String amountDeposited = bank.executeTransaction("Deposit 1001 50000");
@@ -24,7 +23,7 @@ class BankTest {
     }
 
     @Test
-    void ShouldBeAbleToExecuteWithDrawTransaction() throws Exception {
+    void ShouldBeAbleToExecuteWithDrawTransaction() {
         bank = new Bank();
         String accountId = bank.executeTransaction("Create UserName");
         bank.executeTransaction("Deposit "+accountId+" 50000");
@@ -44,7 +43,7 @@ class BankTest {
     }
 
     @Test
-    void ShouldThrowEXceptionWhenAccountNotFound(){
+    void ShouldThrowExceptionWhenAccountNotFound(){
         bank = new Bank();
         assertEquals("Account not found", bank.executeTransaction("Deposit 2001 5000"));
     }

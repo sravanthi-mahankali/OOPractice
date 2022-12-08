@@ -13,7 +13,7 @@ public class Account {
     private final long id;
     private final String name;
     private AUD balance;
-    private final Map<String, List<TransactionType>> transactionHistory = new HashMap<>();
+    private final Map<String, List<TransactionDetails>> transactionHistory = new HashMap<>();
     private final SimpleDateFormat dateFormat = new SimpleDateFormat("M/d/yyyy");
 
     public Account(String name) {
@@ -40,7 +40,7 @@ public class Account {
         validateTransaction(TransactionType.DEPOSIT);
         depositValidation(amount);
         balance =  balance.add(amount) ;
-        recordTransaction(TransactionType.DEPOSIT);
+        recordTransaction(new TransactionDetails(TransactionType.DEPOSIT, new Date(), amount));
         return balance;
     }
 
@@ -60,7 +60,7 @@ public class Account {
         validateTransaction(TransactionType.WITHDRAW);
         withDrawValidation(amount);
         balance = balance.Subtract(amount);
-        recordTransaction(TransactionType.WITHDRAW);
+        recordTransaction(new TransactionDetails(TransactionType.WITHDRAW, new Date(), amount));
         return balance;
     }
 
@@ -83,7 +83,7 @@ public class Account {
             toAccount.depositValidation(amount);
             this.balance = balance.Subtract(amount);
             toAccount.balance = toAccount.balance.add(amount);
-            recordTransaction(TransactionType.TRANSFER);
+            recordTransaction(new TransactionDetails(TransactionType.TRANSFER, new Date(), amount));
             return "Successful";
         } catch (WithDrawException exception) {
             throw new TransferException(exception + " for account "+ this.id);
@@ -93,22 +93,26 @@ public class Account {
 
     }
 
+    public String getTransactionHistory() {
+        return transactionHistory.toString();
+    }
+
     private void validateTransaction(TransactionType transaction) throws MaxTransactionLimitExceededException {
-        List<TransactionType> todayTransactions = transactionHistory.get(dateFormat.format(new Date()));
+        List<TransactionDetails> todayTransactions = transactionHistory.get(dateFormat.format(new Date()));
         if(todayTransactions != null) {
-            if(todayTransactions.stream().filter(t -> t == transaction).count() >= MAX_NO_OF_SIMILAR_TRANSACTIONS_PER_DAY) {
+            if(todayTransactions.stream().filter(t -> t.transactionType == transaction).count() >= MAX_NO_OF_SIMILAR_TRANSACTIONS_PER_DAY) {
                 throw new MaxTransactionLimitExceededException(transaction.toString());
             }
         }
     }
 
-    private void recordTransaction(TransactionType transactionType) {
+    private void recordTransaction(TransactionDetails transactionDetails) {
         String date = dateFormat.format(new Date());
         if(!transactionHistory.containsKey(date)) {
-            transactionHistory.put(date, new ArrayList<>(Collections.singleton(transactionType)));
+            transactionHistory.put(date, new ArrayList<>(Collections.singleton(transactionDetails)));
             return;
         }
-        transactionHistory.get(date).add(transactionType);
+        transactionHistory.get(date).add(transactionDetails);
     }
 
 }
